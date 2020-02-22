@@ -1,0 +1,130 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.padding-b-10
+{
+    padding-bottom :10px !important;
+}
+
+.led-box {
+    height: 30px;
+    width: 25%;
+    margin: 10px 0;
+    float: left;
+}
+
+    .led-box p {
+        font-size: 12px;
+        text-align: center;
+        margin: 1em;
+    }
+
+.led-red {
+    margin: 0 auto;
+    width: 40px;
+    height: 24px;
+    /* background-color: #F00; */
+    /* border-radius: 50%; */
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px; */
+    -webkit-animation: blinkRed 0.5s infinite;
+    -moz-animation: blinkRed 0.5s infinite;
+    -ms-animation: blinkRed 0.5s infinite;
+    -o-animation: blinkRed 0.5s infinite;
+    animation: blinkRed 0.5s infinite;
+}
+
+@-webkit-keyframes blinkRed {
+    from {
+        background-color: #F00;
+    }
+
+    50% {
+        background-color: #A00;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+    }
+
+    to {
+        background-color: #F00;
+    }
+}
+
+@-moz-keyframes blinkRed {
+    from {
+        background-color: #F00;
+    }
+
+    50% {
+        background-color: #A00;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+    }
+
+    to {
+        background-color: #F00;
+    }
+}
+
+@-ms-keyframes blinkRed {
+    from {
+        background-color: #F00;
+    }
+
+    50% {
+        background-color: #A00;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+    }
+
+    to {
+        background-color: #F00;
+    }
+}
+
+@-o-keyframes blinkRed {
+    from {
+        background-color: #F00;
+    }
+
+    50% {
+        background-color: #A00;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+    }
+
+    to {
+        background-color: #F00;
+    }
+}
+
+@keyframes blinkRed {
+    from {
+        background-color: #F00;
+    }
+
+    50% {
+        background-color: #A00;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+    }
+
+    to {
+        background-color: #F00;
+    }
+}
+
+.record {
+
+}
+
+

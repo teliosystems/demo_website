@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cobalt-passkey-256019",
+  "private_key_id": "5234f10e738cc010f6a511fb24d1bf9c20139cea",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCIUd4pgjOrSuiu\nHx18gkzX5tde6Mbeu2iZu9hFfiTwQHwosnQJU0SsbLAg1VzbAbQeFi7N30DbqsCl\nl1BJFx3CSsvrs2rFwBzuRyJaBGthGTsyX7R0VFTTpF4g9/aWJxfMRuEg9/JTBL7d\n+6Fnd8Nk5kwxltt6ZtQVrMkNQANKsE53fZQ82SrAfNz5bD0vQawQVHHyRoRaXSGy\nsIAP/fofQLCPIbgNbURRc4W+TEPshfLCcKoHaP7pJHcy+m/JbGv2K/foQ3hsNWXK\n9b64N9bLCH1sgApClJuzW+1Ro4hcWGWbWgQsk0zaB1sZQuYCDG7dZwhFo0hma3Hz\nqSOkjdjNAgMBAAECggEAC0ey+X5TpjXxoQ7kErx5fVgVtD3Qzvd1BVuc3ss8ZUEA\nxSFXJrpkMVxhCqZ9I4Y1kFPHlbOGm2a6wDkQJKwsAzrLOvrCuBBYlIMAXbCF7if3\nVQjEVufviP/N5i5+khg0COxIjsDVpXb8EERVK8mmOoAwB95y1OMTY6PDkzwbyZ9E\nQkiZgo1cm4npTzStqFlR02rh4XqlY14MVFJHnofw9vDovnMWuNgOkgkyT2oJKLFn\nlA8nX7QQVNE4TyV5rl4dPMCUJrmuX4/PsjLoa1HRoErW3zLJ+H/bk69DuK5WE9Gr\n56dnxNTvhu7w4tXZ6FmrxkVaaKA32qrVgl2BjQnRBQKBgQC/HcQTfcgPc9vJXfCY\nXgrJf3JI+4/5j7EcVOIwv/tF5MtkOKW2wkIB5gB9zNV0umH7og5zIMG6OMsbXULG\nmsxHw9Xh+I7eQZR8tHUJYnjkwxl1ARbGme6WTwLn5VjxqMqmvoZBw+unsKQ8bZKn\nmd+NyMKhG1glMr5s5fLXWYJwywKBgQC2maYQSy5qC1F+bgYbQbVLnMsP4U3AFkai\n1E/w9Lv3LCkfPSR59Mqz8lQwXscUjgZOk/UZo8necg7QXrhsn7HEnC5771Xy5yl3\nXgoAnkpxV1wqjEhmk+7bWkzet2TYyG5FnxEPfE6ArWa3TKCVWfxwix/ErpVSvnor\nkIUpARohxwKBgHYhcvpNTCTpC1ibnUTBFE/aXAzqmeK7Q9FsUmepsypPsryfGyct\nSdmcjn8z5lkBf+EnGWFmRPjTdA/VBJp4Qn61ePX1SnHs/Vhbvt/vIyTbx1eANdDK\ngyQbcINgSysMlz6cE6aA8J+1Wr8TR4wbW4hrKIqmuUQ86mGrfQBJjowjAoGAT4hS\n5WvplnTBlSDU9hBDp+BuLceDdvP85jU1cI0YRcttSdb2yUvO8lvNQZg2fAR0SMt3\nCSjm50WkoCtxhpZz9l/Ue1S+ieMXk49ZKfXIFN/pG/soGc27Tr1hF+ynNyjtptNm\nuej5xGBCifoNQ6ADLP3b423rSjP+wHTdGwQI3scCgYAPAn3qOsXhXKw2yWBmFDy7\nCZaXJs/4ELbuiWB1FPvweTGKrYjalE6R0YjM1xfoALR8z+ylGstY6QgWi3eObHlF\nWYNF9fMc12/IUXF5gyFZHlfFUoKil8lwZOZKS+nfdLSi4OzYgLTHRvsRQsEZRA4G\nmTz3k9+YgZjDQNENTuYMSg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "diseases-demo@cobalt-passkey-256019.iam.gserviceaccount.com",
+  "client_id": "116798296108413660371",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/diseases-demo%40cobalt-passkey-256019.iam.gserviceaccount.com"
+}

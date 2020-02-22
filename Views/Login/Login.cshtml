@@ -1,0 +1,153 @@
+﻿@model  Voice.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+
+
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    @*<link href="~/Content/Site.css" rel="stylesheet" />*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+    <script src="~/scripts/tilt/tilt.jquery.min.js"></script>
+    <script src="~/scripts/bootstrap.js"></script>
+    <link href="~/Content/LoginStyle.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="~/images/icons/favicon.ico" />
+    <link href="~/Content/animate/animate.css" rel="stylesheet" />
+    <link href="~/Content/util.css" rel="stylesheet" />
+    <link href="~/Content/css-hamburgers/hamburgers.min.css" rel="stylesheet" />
+
+
+
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    @*<style type="text/css">
+            .bs-example {
+                height: 220px;
+            }
+
+            .centerlook {
+                padding-left: 400px;
+                font-weight: bold;
+                width: 1000px;
+            }
+
+            .error {
+                padding-left: 400px;
+                font-weight: bold;
+                width: 1000px;
+                color: red;
+            }
+
+            .loginbtn {
+                padding-left: 500px;
+            }
+        </style>*@
+
+</head>
+<body>
+
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="~/images/img-01.png" alt="IMG" />
+                </div>
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    <span class="login100-form-title">
+                        Welcome
+                        <br />Hospital Disease Code Recognition
+                    </span>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" name="UserName" id="UserName" placeholder="User Name">
+                        @*  @Html.EditorFor(model => model.UserName, new { @autocomplete = "off", @AutoCompleteType = "Disabled" , @class="input100" })
+                            @Html.ValidationMessageFor(model => model.UserName, "", new { @style = "color:red" })*@
+
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="password" id="Password" name="Password" placeholder="Password">
+                        @*  @Html.EditorFor(model => model.UserName, new { @autocomplete = "off", @AutoCompleteType = "Disabled", @class = "input100" })
+
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @style = "color:red" })*@
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+    @*<div class="login">
+            <div class="containerLogin">
+                <h3 class="labelLogin text-center">
+                    Welcome
+                    <br />Hospital Disease Code Recognition
+                </h3>
+
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                {
+
+                    <label class="labelLogin">User Name  </label>
+                    @Html.EditorFor(model => model.UserName, new { @autocomplete = "off", @AutoCompleteType = "Disabled" })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @style = "color:red" })
+                    <br /> <br />
+                    <label class="labelLogin">Password </label>
+                    @Html.EditorFor(model => model.Password)
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @style = "color:red" })
+
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+
+                }
+            </div>
+        </div>*@
+
+    @*<script>
+            $(function () {
+                $('.js-tilt').tilt({
+                    scale: 1.1
+                });
+            });
+        </script>*@
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

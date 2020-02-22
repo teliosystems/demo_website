@@ -1,0 +1,60 @@
+﻿@model  List<Voice.Areas.Admin.Models.UsersModel>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<style>
+    thead {
+        background-color: aquamarine;
+    }
+</style>
+
+<div class="container">
+
+    <br />
+    <br />
+    <br />
+
+
+    <div class="row">
+
+        @Html.ActionLink("Add new user", "EditeUser", "Users", new { area = "Admin", userId = 0 }, new { @class = "btn btn-primary" })
+
+        @Html.ActionLink("Log out", "Login", "Login",new{ area = ""}, new { @class = "btn btn-primary"  ,style= "float: right;" })
+    </div>
+    <br />
+    <div class="row">
+        <table class="table">
+            <thead class="">
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Expiry date
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.name
+                            @*@Html.ActionLink(item.name, "EditeUser", "Users", new { area = "Admin", userId = item.userId }, null)*@
+
+                        </td>
+                        <td>
+                            @item.expiryDate
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

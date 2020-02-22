@@ -1,0 +1,109 @@
+﻿@model  Voice.Areas.Admin.Models.UsersModel
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@*<script src="~/scripts/jquery-1.12.4.js"></script>
+<script src="~/scripts/jquery-ui.js"></script>*@
+<style>
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    } 
+
+    .addDiv {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    label {
+        padding-top: 20px;
+    }
+</style>
+<br />
+<br />
+
+<br />
+<div class="container addDiv">
+     
+    @using (Html.BeginForm("EditeUser", "Users", FormMethod.Post, new { area = "admin" }))
+    {
+    <div class="container">
+        @Html.HiddenFor(h => h.userId)
+        <div class="row">
+            <div class="col-sm-2">
+
+                @Html.LabelFor(f => f.name)
+            </div>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(f => f.name)
+                @Html.ValidationMessageFor(f => f.name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                @Html.LabelFor(f => f.expiryDate)
+            </div>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(f => f.expiryDate)
+                @Html.ValidationMessageFor(f => f.expiryDate, "", new { @class = "text-danger", autocomplete = "off" })
+            </div>
+        </div>
+
+        @if (Model.userId == 0)
+        {
+
+            <div class="row">
+                <div class="col-sm-2">
+                    @Html.LabelFor(f => f.userName)
+                </div>
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(f => f.userName)
+                    @Html.ValidationMessageFor(f => f.userName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    @Html.LabelFor(f => f.password)
+                </div>
+                <div class="col-sm-10">
+                    @Html.PasswordFor(f => f.password)
+                    @Html.ValidationMessageFor(f => f.password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    @Html.LabelFor(f => f.confirmPassword)
+                </div>  <div class="col-sm-10">
+                    @Html.PasswordFor(f => f.confirmPassword)
+                    @Html.ValidationMessageFor(f => f.confirmPassword, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        }
+        else
+        {
+            @Html.HiddenFor(h => h.password)
+            @Html.HiddenFor(h => h.userName)
+            @Html.HiddenFor(h => h.confirmPassword)
+
+        }
+    </div>
+
+        <input type="submit" value="save" class="btn btn-primary" />
+
+        @Html.ActionLink("Cancel", "ListUser", "Users", new { area = "Admin" }, new { @class = "btn btn-default" })
+    }
+</div>
+
+
+<script>
+    $(function () {
+        $("#expiryDate").datepicker({
+            calendarWeeks: true
+        });
+    });
+</script>

@@ -1,0 +1,283 @@
+﻿
+@{
+    ViewBag.Title = "Voice";
+}
+
+
+<style>
+    .lableBackGroundColor {
+        background-color: #D8D8DB;
+        padding: 5px;
+        width: 100%;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        /*resize: vertical;*/
+        resize: none;
+    }
+
+    input[type=text], textarea {
+        max-width: 100% !important;
+        background-color: #F1F4FF;
+    }
+
+        input[type=text]:focus {
+            background-color: #ffffff;
+        }
+
+    .soundEffect {
+        border: 2px dashed green;
+    }
+</style>
+
+<meta charset="UTF-8">
+<title>Simple Recorder.js demo with record, stop and pause</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="~/scripts/jquery-1.10.2.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<div class="container" style="padding-top:10px">
+    @*<div class="row padding-b-10">
+            <div class="col-sm-4"><label>In which country did the treatment take place?</label></div>
+            <div class="col-sm-8"> <input type="text" disabled="disabled" />  </div>
+        </div>
+        <div class="row  padding-b-10">
+            <div class="col-sm-4"><label>What is the currency of the invoice?</label></div>
+            <div class="col-sm-8"> <input type="text" disabled="disabled" />  </div>
+        </div>
+
+        <div class="row  padding-b-10">
+            <div class="col-sm-4"><label>What is the total amount of the claim?</label></div>
+            <div class="col-sm-8"> <input type="text" disabled="disabled" />  </div>
+        </div>*@
+
+
+    <div class="row padding-b-10">
+        <div class="col-sm-12">
+            <label>Medical Practitioner’s details:</label>
+        </div>
+    </div>
+    <div class="row padding-b-10">
+        <div class="col-sm-1"><label class="lableBackGroundColor">Name:</label></div>
+        <div class="col-sm-11"> <input type="text" id="txtName" disabled="disabled" />  </div>
+    </div>
+
+
+    <div class="row padding-b-10">
+        <div class="col-sm-1"><label class="lableBackGroundColor">Address:</label></div>
+        <div class="col-sm-11"> <input type="text" id="txtAddress" disabled="disabled" />  </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-5"><label class="lableBackGroundColor">Telephone (Please include country code, area code and number):</label></div>
+        <div class="col-sm-7"> <input type="text" id="txtTelephone" disabled="disabled" />  </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-2"><label class="lableBackGroundColor">Qualifications:</label></div>
+        <div class="col-sm-10"> <input type="text" id="txtQualifications" disabled="disabled" />  </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-5"><label class="lableBackGroundColor">Reason for treatment / visit to medical practitioner:</label></div>
+        <div class="col-sm-7"> <input type="text" id="txtReason" disabled="disabled" />  </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-4"><label>Onset date when symptoms first noticed by patient:</label></div>
+        <div class="col-sm-8"> <input type="text" id="txtOnsetDate" disabled="disabled" />  </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-4"><label>When did the patient first see a doctor?:</label></div>
+        <div class="col-sm-8"> <input type="text" id="txtPatientFirst" disabled="disabled" />  </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-3">
+            <label class="lableBackGroundColor">Details of treatment:</label>
+        </div>
+        <div class="col-sm-9">
+            <input type="text" id="txt" disabled="disabled" />
+        </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-12">
+            <input type="text" id="txt" disabled="disabled" />
+        </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-3">
+            <label class="lableBackGroundColor">Details of operation:</label>
+        </div>
+        <div class="col-sm-9">
+            <input type="text" id="txtDetailsOfOperation" disabled="disabled" />
+        </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-12">
+            <input type="text" id="txt" disabled="disabled" />
+        </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-3">
+            <label class="lableBackGroundColor">Disease Diagnosis | Disease Codes</label>
+        </div>
+        <div class="col-sm-9">
+            <textarea name="txtDetailsofoperation" disabled="disabled" id="txtDetailsofoperation" rows="5" style="max-width: 100%;width:100% !important"></textarea>
+        </div>
+    </div>
+    <div class="row padding-b-10">
+        <div class="col-sm-12">
+            <input type="text" id="txt" disabled="disabled" />
+        </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-sm-3">
+            <label class="lableBackGroundColor">Details of medication:</label>
+        </div>
+        <div class="col-sm-9">
+            <input type="text" id="txtDetailsOfMedication" disabled="disabled" />
+        </div>
+    </div>
+
+    <div class="row padding-b-10">
+        <div class="col-lg-12">
+            <input type="text" id="txt" disabled="disabled" />
+        </div>
+    </div>
+
+
+
+    <div id="controls">
+
+        <div class="row">
+
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+                @*<div class="led-box">*@
+                @*<button id="stopButton">
+                        <div class="led-red">
+                            <i class="led-red" aria-hidden="true"></i>
+                            <span>
+                                Stop
+                            </span>
+                        </div>
+                    </button>*@
+                <button id="recordButton"><img src="~/images/recordButton.png" style="width: 50px;" />  </button>
+                <button id="stopButton"><img src="~/images/recording.png" style="width: 50px;" />  </button>
+                @*</div>*@
+            </div>
+            <div class="col-sm-4"></div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- HTML5 Speech Recognition API -->
+@*<script>
+    function startDictation() {
+
+        if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+            var recognition = new webkitSpeechRecognition();
+
+            recognition.continuous = false;
+            recognition.interimResults = false;
+
+            recognition.lang = "en-US";
+            recognition.start();
+
+            recognition.onresult = function (e) {
+                document.getElementById('transcript').value
+                    = e.results[0][0].transcript;
+                recognition.stop();
+                //document.getElementById('labnol').submit();
+            };
+
+            recognition.onerror = function (e) {
+                recognition.stop();
+            }
+
+        }
+    }
+</script>*@
+
+
+
+<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+
+<script src="~/scripts/jsVoice/recorder.js"></script>
+<script src="~/scripts/jsVoice/app.js"></script>
+
+
+<script type="text/javascript">
+        $(function () {
+            changeData();
+        });
+
+        function changeData() {
+
+            var num = Math.floor(Math.random() * 3) + 1;
+            debugger;
+            switch (num) {
+                case 1:
+                    $("#txtName").val("Mohammad ");
+                    $("#txtAddress").val("amman");
+                    $("#txtTelephone").val("0789614554");
+                    $("#txtQualifications").val("M.A.");
+                    $("#txtReason").val("Collywobbles");
+                    $("#txtOnsetDate").val();
+                    $("#txtPatientFirst").val("1-10-2019");
+                    $("#txtDetailsOfOperation").val();
+                    $("#txtDetailsOfMedication").val();
+                    break;
+
+
+                case 2:
+                    $("#txtName").val("ibrahem");
+                    $("#txtAddress").val("Aqaba");
+                    $("#txtTelephone").val("07832135846");
+                    $("#txtQualifications").val("Bachelor's degree");
+                    $("#txtReason").val("headache");
+                    $("#txtOnsetDate").val();
+                    $("#txtPatientFirst").val("12-11-2019");
+                    $("#txtDetailsOfOperation").val();
+                    $("#txtDetailsOfMedication").val();
+                    break;
+
+
+                case 3:
+                    $("#txtName").val("Ahmad");
+                    $("#txtAddress").val("irbed");
+                    $("#txtTelephone").val("099452165456");
+                    $("#txtQualifications").val("Ph.D.");
+                    $("#txtReason").val("Cough");
+                    $("#txtOnsetDate").val();
+                    $("#txtPatientFirst").val("12-11-2019");
+                    $("#txtDetailsOfOperation").val();
+                    $("#txtDetailsOfMedication").val();
+                    break;
+                default:
+            }
+
+        }
+    </script>

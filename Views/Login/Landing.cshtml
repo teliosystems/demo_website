@@ -1,0 +1,238 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+    <script src="~/scripts/tilt/tilt.jquery.min.js"></script>
+    <script src="~/scripts/bootstrap.js"></script>
+
+    <script src="~/scripts/landing/bootstrap.bundle.min.js"></script>
+    <title>Emgen Health Systems</title>
+
+    <!-- Bootstrap core CSS -->
+    @*<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">*@
+    <!-- Custom fonts for this template -->
+    <link href="~/Content/landing/LandingFont.css" rel="stylesheet" />
+    <link href="~/Content/landing/LandingFont2.css" rel="stylesheet" />
+    @*<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">*@
+    <!-- Custom styles for this template -->
+    <link href="~/Content/landing/one-page-wonder.min.css" rel="stylesheet" />
+
+    <style>
+        .rcorners {
+            border-radius: 25px;
+            background: #4F81BD;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            @* <a class="navbar-brand" href="#">Start Bootstrap</a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>*@
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    @*<li class="nav-item">
+                            <a class="nav-link" href="#">Sign Up</a>
+                        </li>*@
+                    <li class="nav-item">
+                        @Html.ActionLink("Demo Login", "Login", "Login", null, new { @class = "nav-link", style = "font-size: 1.8rem; text-transform: none;" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <header class="text-center text-white">
+            @*<div class="masthead-content">*@
+                <div class="container">
+
+                    <img src="~/images/landing/Logo 3.png" />
+
+                </div>
+            @*</div>*@
+        </header>
+
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <h1 class="masthead-heading mb-0 text-center">Emgen Health Systems</h1>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="p-5">
+                    <h3 class="display-4"> WHO WE ARE </h3>
+                </div>
+                <div>
+                    <div class="p-5">
+                        <p>
+                            EMGEN HEALTH is changing how claims processing is done inside health care facilities.
+                            We enable current Patient Diagnosis to Insurance Codes Process from being Manual with Many Errors to be  Fully Automated  and with No Errors
+                            Using Artificial Intelligence and NLP
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br />
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="p-5">
+                    @*<h2 class="display-4">For those about to rock...</h2>*@
+                    <h3 class="display-4"> THE PROBLEM </h3>
+                    <p>
+                        Filling insurance form includes many errors due to:
+                        <br />
+                        1- Using many and complicated menus to select the codes
+                        <br />
+
+                        2- Too many codes to select from – 68,000 codes in ICD10
+                        <br />
+
+                        3- Lack of time by the doctor to verify their entries
+                        <br />
+
+                        4- Too many rejections by insurance companies due to these errors
+                    </p>
+                </div>
+                <div>
+                    <img class="img-fluid rounded-circle" src="~/images/landing/theProblem.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="p-5">
+                    <h3 class="display-4">THE SOLUTION</h3>
+                </div>
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="~/images/landing/theSolution.png" alt="">
+                    <div class="row">
+                        <div class="col-lg-2">
+                        </div>
+                        <div class="col-lg-4">
+                            <p>
+                                Current
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>
+                                Avoiding or Automating many manual steps using our solution
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br />
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="p-5">
+                    <h3 class="display-4"> OUR BENFITS </h3>
+
+                    <p>
+                        Conversational Interface and Talking Intelligence
+                        Using AI that Understands the Diagnosis/Treatment directly from the Doctor as he/she speaks and fills the insurance form directly with No Human Intervention
+                    </p>
+                </div>
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="~/images/landing/ourBenfits.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="p-5">
+                    <h3 class="display-4">
+                        THE SOLUTION BENEFITS TO DIFFERENT PLAYERS
+                    </h3>
+                </div>
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="~/images/landing/theSolutionBenfits.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <br />
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="p-5">
+                    <h3 class="display-4">
+                        THE SOLUTION: HOW
+                    </h3>
+                </div>
+            </div>
+            <div class="p-5">
+                <img class="img-fluid rounded-circle" src="~/images/landing/theSolutionHow.png" alt="">
+            </div>
+        </div>
+    </section>
+    <br />
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="p-5">
+                    <h3 class="display-4">
+                        OUR UNIQUE FEATURES
+                    </h3>
+                </div>
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="~/images/landing/ourUniqueFeatures.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2019</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    @*<script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>*@
+
+</body>
+</html>
